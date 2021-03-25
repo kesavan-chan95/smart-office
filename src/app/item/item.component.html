@@ -1,0 +1,26 @@
+<mat-form-field>
+    <mat-label>Name of the item</mat-label>
+    <input matInput [(ngModel)]="Name">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Price</mat-label>
+    <input matInput [(ngModel)]="Price">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Discount in %</mat-label>
+    <input matInput [(ngModel)]="discount">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Barcode</mat-label>
+    <input matInput [(ngModel)]="barcode">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Stock available</mat-label>
+    <input matInput [(ngModel)]="Stock">
+  </mat-form-field>
+  <br/>
+  <button type="submit" mat-raised-button color="accent" (click)="item()">Add</button>

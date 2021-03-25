@@ -1,0 +1,37 @@
+
+
+<table class="table" id='tab'> 
+
+    <thead> 
+
+    <tr> 
+
+        <th scope="col">Name</th> 
+
+        <th scope="col">Email</th> 
+
+        <th scope="col">Contact</th> 
+
+        <th scope="col">Address</th> 
+        
+    </tr> 
+
+    </thead> 
+
+    <tbody> 
+
+    <tr *ngFor="let e of lis;"> 
+
+        <td>{{ e.name }}</td> 
+
+        <td>{{ e.email }}</td> 
+
+        <td>{{ e.contact }}</td> 
+
+        <td>{{ e.address }}</td> 
+
+    </tr> 
+
+    </tbody> 
+
+</table>  

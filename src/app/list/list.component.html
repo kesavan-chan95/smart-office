@@ -1,0 +1,42 @@
+
+
+<table class="table" id='tab'> 
+
+    <thead> 
+
+    <tr> 
+
+        <th scope="col">Name</th> 
+
+        <th scope="col">Price</th> 
+
+        <th scope="col">Discount</th> 
+
+        <th scope="col">Barcode</th> 
+
+        <th scope="col">Stock</th> 
+        
+
+    </tr> 
+
+    </thead> 
+
+    <tbody> 
+
+    <tr *ngFor="let e of lis;"> 
+
+        <td>{{ e.name }}</td> 
+
+        <td>{{ e.price }}</td> 
+
+        <td>{{ e.Discount }}</td> 
+
+        <td>{{ e.Barcode }}</td> 
+
+        <td>{{ e.stock }}</td> 
+
+    </tr> 
+
+    </tbody> 
+
+</table>  

@@ -1,0 +1,22 @@
+<mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="Name">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="Email">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Contact no</mat-label>
+    <input matInput [(ngModel)]="Contact">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>address </mat-label>
+    <input matInput [(ngModel)]="Address">
+  </mat-form-field>
+  <br/>
+  <br/>
+  <button type="submit" mat-raised-button color="accent" (click)="customer()">Add</button>

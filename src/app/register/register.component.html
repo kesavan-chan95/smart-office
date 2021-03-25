@@ -1,0 +1,18 @@
+
+<mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput #email [(ngModel)]="Email" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Phone</mat-label>
+    <input matInput onKeyPress="if(this.value.length==10) return false;" maxlength="10"  [(ngModel)]="phone" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="pwd" [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  <br/>
+  <br/>
+  <button type="submit" mat-raised-button color="accent" (click)="register()" >Sign up</button>

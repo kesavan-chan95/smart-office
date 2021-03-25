@@ -1,0 +1,18 @@
+#wrapper{
+  width: 540px;
+}
+.block{
+  display: inline-block;
+  width: 93px;
+  height: 60px;
+  margin: 5px;
+  background-color: white;
+  border-style: outset;
+}
+.bigger{
+  height: 110px;
+}
+.larger{
+  height: 110px;
+  width: 190px;
+}

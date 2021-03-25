@@ -1,0 +1,25 @@
+<mat-card class="example-card">
+<form class="example-form">
+    <h1>Slot Master</h1>
+    <mat-form-field class="example-full-width">
+      <mat-label> Slot Name</mat-label>
+      <input matInput placeholder="Enter the slot name" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width fills" appearance="fill">
+        <mat-label>Slot Type</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <section class="example-section">
+        <span>Facility Available</span> <br/>
+        <mat-checkbox class="example-margin">White Board</mat-checkbox><br/>
+        <mat-checkbox class="example-margin">Projector</mat-checkbox><br/>
+        <mat-checkbox class="example-margin">Etc</mat-checkbox>
+      </section>
+      <br/>
+      <button mat-raised-button color="primary">Add Employee</button>
+  </form>
+  </mat-card>   
