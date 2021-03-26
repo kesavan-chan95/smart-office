@@ -4,24 +4,23 @@ import { ItemComponent } from './item/item.component';
 import {ListComponent} from './list/list.component';
 import {CustomerComponent} from './customer/customer.component';
 import {CustomerListComponent} from './customer-list/customer-list.component';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './register/register.component';
 import { EmplistComponent } from './emplist/emplist.component';
 import { EmpComponent } from './emp/emp.component';
 import {SlotComponent} from './slot/slot.component'
-import {SlotListComponent} from './slot-list/slot-list.component'
+import {SlotListComponent} from './slot-list/slot-list.component';
+import {SigninComponent} from './signin/signin.component';
+import {SignupComponent} from './signup/signup.component';
 const routes: Routes = [
   { path: 'item', component: ItemComponent },
-  { path: '', component: LoginComponent },
+  { path: '', component: SigninComponent },
   { path: 'customer', component: CustomerComponent },
   { path: 'cuslist', component: CustomerListComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
   { path: 'list', component: ListComponent },
   { path:'emplist', component:EmplistComponent},
   { path:'emp', component:EmpComponent},
   { path:'slot', component:SlotComponent},
-  { path:'slotlist', component:SlotListComponent}
+  { path:'slotlist', component:SlotListComponent},
+  { path:'signup', component:SignupComponent}
 ];
 
 @NgModule({
