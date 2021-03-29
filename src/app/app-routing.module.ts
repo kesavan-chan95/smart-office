@@ -10,6 +10,8 @@ import {SlotComponent} from './slot/slot.component'
 import {SlotListComponent} from './slot-list/slot-list.component';
 import {SigninComponent} from './signin/signin.component';
 import {SignupComponent} from './signup/signup.component';
+import {BranchComponent} from './branch/branch.component';
+import {BusinessComponent} from './business/business.component'
 const routes: Routes = [
   { path: 'item', component: ItemComponent },
   { path: '', component: SigninComponent },
@@ -20,7 +22,11 @@ const routes: Routes = [
   { path:'emp', component:EmpComponent},
   { path:'slot', component:SlotComponent},
   { path:'slotlist', component:SlotListComponent},
-  { path:'signup', component:SignupComponent}
+  { path:'signup', component:SignupComponent},
+  { path:'branch', component:BranchComponent},
+  { path:'business', component:BusinessComponent}
+  
+
 ];
 
 @NgModule({

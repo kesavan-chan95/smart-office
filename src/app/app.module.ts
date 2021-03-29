@@ -33,7 +33,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SlotListComponent } from './slot-list/slot-list.component';
 import {SigninComponent} from './signin/signin.component';
-import {SignupComponent} from './signup/signup.component'
+import {SignupComponent} from './signup/signup.component';
+import { BusinessComponent } from './business/business.component';
+import { BranchComponent } from './branch/branch.component'
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import {SignupComponent} from './signup/signup.component'
     EmplistComponent,
     EmpComponent,
     SlotComponent,
-    SlotListComponent
+    SlotListComponent,
+    BusinessComponent,
+    BranchComponent
   ],
   imports: [
     BrowserModule,
