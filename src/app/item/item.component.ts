@@ -8,10 +8,12 @@ import { ApiService } from '../services/api.services'
 export class ItemComponent implements OnInit {
   
   Name: string;
-  Price: string;
-  discount : string;
+  email: string;
+  Loginname : string;
   barcode : string;
-  Stock : Number;  
+  mobile : Number;  
+  Password: string;
+  type : string
 
   constructor(private serivce:ApiService) { }
 
@@ -19,11 +21,13 @@ export class ItemComponent implements OnInit {
   }
   item(){
     let data = {
-      name: this.Name,
-      price: this.Price,
-      Discount: this.discount,
-      Barcode: this.barcode,
-      stock: this.Stock
+      UserId: 0,
+      UserName: this.Name,
+      MobileNo: this.mobile,
+      EmailId: this.email,
+      LoginName: this.Loginname,
+      LoginPassword: this.Password,
+      type:this.type
     }
     console.log(data)
     this.serivce.item(data).subscribe(res=>{

@@ -1,7 +1,7 @@
 import { Component, AfterViewInit,ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-
-
+import { MatDialog} from '@angular/material/dialog';
+import {EmpComponent} from '../emp/emp.component';
 
 @Component({
   selector: 'app-emplist',
@@ -12,7 +12,15 @@ export class EmplistComponent  {
   displayedColumns: string[] = ['position', 'name', 'Department', 'Designation', 'Contact'];
   dataSource = ELEMENT_DATA;
 
-  
+  constructor(private matDialogModule:MatDialog) { }
+  onOpenDialogclick(){
+    let matDialogRef = this.matDialogModule.open(EmpComponent,
+      {
+        width:"1700px",
+        height:"600px"
+      });
+    matDialogRef.afterClosed();
+  }
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   // ngAfterViewInit() {

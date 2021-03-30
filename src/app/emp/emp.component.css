@@ -8,6 +8,10 @@
     width: 100%;
   }
 
+  hr {
+    border-top: 6px solid blue;
+    border-radius: 5px;
+  }
   
   .left{
     flex: 1 0 100% !important;
@@ -16,4 +20,7 @@
     flex: 1 0 100% !important;
     padding-top: 32.1px;
     padding-left: 17px;
+  }
+  button{
+    margin-right: 20px;
   }

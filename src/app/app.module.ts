@@ -34,8 +34,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SlotListComponent } from './slot-list/slot-list.component';
 import {SigninComponent} from './signin/signin.component';
 import {SignupComponent} from './signup/signup.component';
-import { BusinessComponent } from './business/business.component';
-import { BranchComponent } from './branch/branch.component'
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -53,9 +52,7 @@ import { BranchComponent } from './branch/branch.component'
     EmplistComponent,
     EmpComponent,
     SlotComponent,
-    SlotListComponent,
-    BusinessComponent,
-    BranchComponent
+    SlotListComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +75,7 @@ import { BranchComponent } from './branch/branch.component'
     MatProgressBarModule,
     MatButtonModule,
     MatSidenavModule,
+    MatDialogModule,
     BrowserAnimationsModule
   ],
   providers: [],

@@ -10,10 +10,12 @@ import {SlotComponent} from './slot/slot.component'
 import {SlotListComponent} from './slot-list/slot-list.component';
 import {SigninComponent} from './signin/signin.component';
 import {SignupComponent} from './signup/signup.component';
-import {BranchComponent} from './branch/branch.component';
-import {BusinessComponent} from './business/business.component'
+import {LoginComponent} from './login/login.component';
+
+
 const routes: Routes = [
   { path: 'item', component: ItemComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', component: SigninComponent },
   { path: 'customer', component: CustomerComponent },
   { path: 'cuslist', component: CustomerListComponent },
@@ -23,8 +25,7 @@ const routes: Routes = [
   { path:'slot', component:SlotComponent},
   { path:'slotlist', component:SlotListComponent},
   { path:'signup', component:SignupComponent},
-  { path:'branch', component:BranchComponent},
-  { path:'business', component:BusinessComponent}
+
   
 
 ];
