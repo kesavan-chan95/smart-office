@@ -1,7 +1,7 @@
 <mat-card>
   <h1>Employee list</h1>
   <button mat-raised-button color="primary" style="
-  float: right;" routerLink="/emp">Add Employee</button>
+  float: right;" (click)="onOpenDialogclick()">Add Employee</button>
   
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!-- Position Column -->

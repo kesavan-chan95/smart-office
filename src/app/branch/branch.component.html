@@ -1,60 +1,33 @@
+
 <form class="example-form">
     <div class="parent" fxLayout="row" >   
         <div fxFlex class="left">
-     <h1>Employee Details</h1>
+     <h1>Branch Details</h1>
     <mat-form-field class="example-full-width">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Enter the name">
+      <mat-label>Branch Name</mat-label>
+      <input matInput placeholder="Enter the Branch name">
     </mat-form-field>
   
     <mat-form-field class="example-full-width">
-      <mat-label>Department</mat-label>
-      <input matInput placeholder="Enter the Department...">
+      <mat-label>Contact No. </mat-label>
+      <input matInput placeholder="Enter the Contact no...">
     </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <mat-label>Designation</mat-label>
-        <input matInput placeholder="Enter the Designation...">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Contact</mat-label>
-        <input matInput placeholder="Enter the Contact...">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Alternative Contact No.</mat-label>
-        <input matInput placeholder="Enter the Alternative Contact...">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Email</mat-label>
-        <input matInput placeholder="Enter the Email...">
-      </mat-form-field>
         </div>
         
         <div fxFlex class="right">
             <h1> </h1>
-      <mat-form-field class="example-full-width">
-        <mat-label>Salary</mat-label>
-        <input matInput placeholder="Enter the Salary...">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Pan No.</mat-label>
-        <input matInput placeholder="Enter the Pan No....">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Bank A/C No.</mat-label>
-        <input matInput placeholder="Enter the Bank A/C No....">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Beneficiary Name</mat-label>
-        <input matInput placeholder="Enter the Beneficiary Name....">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Bank Name</mat-label>
-        <input matInput placeholder="Enter the Bank Name....">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>IFSC Code</mat-label>
-        <input matInput placeholder="Enter the IFSC Code....">
-      </mat-form-field>
+        <mat-form-field class="example-full-width">
+         <mat-label>Email</mat-label>
+         <input matInput placeholder="Enter the Email...">
+        </mat-form-field>
+        <mat-form-field class="example-full-width fills" appearance="fill">
+            <mat-label>Manager</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
     </div>
     </div>
     <div class="parent" fxLayout="row" >   
@@ -142,4 +115,5 @@
 </div>
       <button mat-raised-button color="primary"  routerLink="/emplist">Submit</button>
       <button mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
+      
   </form>

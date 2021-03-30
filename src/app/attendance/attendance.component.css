@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+}
+
+span{
+  color: white;
+  background-color: black;
+  padding: 5px;
+}
+button{
+  margin-right: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+}

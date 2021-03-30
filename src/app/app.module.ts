@@ -33,7 +33,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SlotListComponent } from './slot-list/slot-list.component';
 import {SigninComponent} from './signin/signin.component';
-import {SignupComponent} from './signup/signup.component'
+import {SignupComponent} from './signup/signup.component';
+import { EmpattendanceComponent } from './empattendance/empattendance.component';
+import { AttendanceComponent } from './attendance/attendance.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {BranchComponent} from './branch/branch.component';
+import {BranchlistComponent } from './branchlist/branchlist.component';
+import {BusinessComponent} from './business/business.component';
+import {BusinesslistComponent} from './businesslist/businesslist.component';
 
 
 @NgModule({
@@ -51,7 +58,18 @@ import {SignupComponent} from './signup/signup.component'
     EmplistComponent,
     EmpComponent,
     SlotComponent,
-    SlotListComponent
+    SlotListComponent,
+    EmpattendanceComponent,
+    AttendanceComponent,
+    BranchComponent,
+    BusinessComponent,
+    BusinesslistComponent,
+    BranchlistComponent
+  
+  ],
+  entryComponents:[
+    AttendanceComponent,
+    BusinessComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +92,10 @@ import {SignupComponent} from './signup/signup.component'
     MatProgressBarModule,
     MatButtonModule,
     MatSidenavModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
+   
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

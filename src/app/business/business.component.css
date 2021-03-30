@@ -5,14 +5,9 @@
   }
   
   .example-full-width {
-    width: 100%;
+    width: 85%;
   }
 
-  hr {
-    border-top: 6px solid blue;
-    border-radius: 5px;
-  }
-  
   .left{
     flex: 1 0 100% !important;
   }
