@@ -1,17 +1,22 @@
-<table mat-tableclass="mat-elevation-z8">
+<!-- <table mat-tableclass="mat-elevation-z8">
     <div class="parent" fxLayout="row" >   
         <div fxFlex class="left">
      <h1>iyyankannu</h1>
      <h2>08:00[+08:00]Hrs</h2>
-     <button>Add Note</button>
-        </div>
+     <button class="icon"><mat-icon>note_add</mat-icon>Add Note</button>
+        </div> 
         <div fxFlex class="right">
             <button><span>P</span>  Present</button>
             <button><span>HD</span>  Half day</button>
             <button><span>A</span>  Absent</button><br>
             <button><span>Lf</span>  Late fee</button>   
-            <p>Hd</p>         
+            <div class="default-time-example">
+                <input aria-label="default time" [ngxTimepicker]="defaultValue" [value]="'05:11 pm'"  readonly>
+                <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
+           </div>
+                 
       </div>
     </div>
+   
 <button style="float: right;" (click)="onCloseClick()">Close</button>
-</table>
+</table> -->
