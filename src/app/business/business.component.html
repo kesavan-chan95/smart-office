@@ -1,5 +1,5 @@
 
-<form class="example-form">
+<form class="example-form" fxflex="50%" fxflex.xs="100%" fxflex.sm="50%">
     <div class="parent" fxLayout="row" >   
         <div fxFlex class="left">
      <h1>Business Details</h1>
@@ -29,7 +29,7 @@
         <input matInput placeholder="Enter the Website....">
       </mat-form-field>
       <mat-form-field class="example-full-width fills" appearance="fill">
-        <mat-label>Weekly holyday Type</mat-label>
+        <mat-label>Weekly holiday Type</mat-label>
         <mat-select>
           <mat-option *ngFor="let food of foods" [value]="food.value">
             {{food.viewValue}}

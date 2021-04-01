@@ -41,6 +41,10 @@ import {BranchComponent} from './branch/branch.component';
 import {BranchlistComponent } from './branchlist/branchlist.component';
 import {BusinessComponent} from './business/business.component';
 import {BusinesslistComponent} from './businesslist/businesslist.component';
+import {EmployeeroomComponent} from './employeeroom/employeeroom.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -64,12 +68,16 @@ import {BusinesslistComponent} from './businesslist/businesslist.component';
     BranchComponent,
     BusinessComponent,
     BusinesslistComponent,
-    BranchlistComponent
+    BranchlistComponent,
+    EmployeeroomComponent,
+    DatepickerComponent
   
   ],
   entryComponents:[
     AttendanceComponent,
-    BusinessComponent
+    BusinessComponent,
+    MatDatepickerModule, 
+    MatFormFieldModule
   ],
   imports: [
     BrowserModule,
@@ -93,9 +101,10 @@ import {BusinesslistComponent} from './businesslist/businesslist.component';
     MatButtonModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    MatDialogModule
-   
-   
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+       
   ],
   providers: [],
   bootstrap: [AppComponent]

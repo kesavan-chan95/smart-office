@@ -1,0 +1,25 @@
+/* #wrapper{
+    width: 540px;
+  } */
+  .block{
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    margin: 5px;
+    background-color: white;
+    border-style: outset;
+  }
+  
+ .datepicker{
+    width: 170px;
+    margin-right: 10px;
+  }
+  mat-card{
+      text-align: center;
+  }
+  mat-form-field{
+    width: 350px;
+  }
+
+
+  
