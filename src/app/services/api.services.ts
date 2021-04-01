@@ -11,6 +11,7 @@ export class ApiService {
   item(data){
     return this.http.post(this.url+'/api/Login/UserCreation',data) 
   }
+ 
   customer(data){
     return this.http.post(this.url+'/customer',data) 
   }
@@ -26,6 +27,13 @@ register(data){
 getCus(){
   return this.http.get(this.url+'/listCus')
 }
-  
-
+addemp(data){
+  return this.http.post(this.url+'/api/Employee/EmployeeCreation',data) 
+}
+getemp(){
+  return this.http.get(this.url+'/api/Employee/GetAllEmployee')
+}
+deleteemp(data){
+  return this.http.post(this.url+'/api/Employee/EmployeeCreation',data)
+}
 }

@@ -4,56 +4,77 @@
      <h1>Employee Details</h1>
     <mat-form-field class="example-full-width">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="Enter the name">
+      <input matInput placeholder="Enter the name" name="Name" [(ngModel)]="Name">
     </mat-form-field>
   
     <mat-form-field class="example-full-width">
       <mat-label>Department</mat-label>
-      <input matInput placeholder="Enter the Department...">
+      <input type="number" matInput placeholder="Enter the Department..." name="Department" [(ngModel)]="Department" >
     </mat-form-field>
     <mat-form-field class="example-full-width">
         <mat-label>Designation</mat-label>
-        <input matInput placeholder="Enter the Designation...">
+        <input type="number" matInput placeholder="Enter the Designation..." name="Designation" [(ngModel)]="Designation" >
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Contact</mat-label>
-        <input matInput placeholder="Enter the Contact...">
+        <input matInput placeholder="Enter the Contact..." name="Contact" [(ngModel)]="Contact" >
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Alternative Contact No.</mat-label>
-        <input matInput placeholder="Enter the Alternative Contact...">
+        <input matInput placeholder="Enter the Alternative Contact..." name="AltContact" [(ngModel)]="AltContact" >
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Enter the Email...">
+        <input matInput placeholder="Enter the Email..." name="email" [(ngModel)]="email">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Salary</mat-label>
+        <input matInput placeholder="Enter the Salary..." name="Salary" [(ngModel)]="Salary" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Basic Salary</mat-label>
+        <input type="number" matInput placeholder="Enter the Salary..." name="BSalary" [(ngModel)]="BSalary" >
       </mat-form-field>
         </div>
         
         <div fxFlex class="right">
             <h1> </h1>
+            <mat-form-field class="example-full-width">
+              <mat-label>Leave Allowed Month</mat-label>
+              <input type="number" matInput placeholder="Enter the EmpLeaveAllowdMonth..." name="Leave" [(ngModel)]="Leave">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Pan no.</mat-label>
+              <input matInput placeholder="Enter the Pan number..." name="pan" [(ngModel)]="pan">
+            </mat-form-field>     
       <mat-form-field class="example-full-width">
-        <mat-label>Salary</mat-label>
-        <input matInput placeholder="Enter the Salary...">
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Pan No.</mat-label>
-        <input matInput placeholder="Enter the Pan No....">
+        <mat-label>Employee Uid</mat-label>
+        <input matInput placeholder="Enter the EmpUid..." name="EmpUid" [(ngModel)]="EmpUid">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Bank A/C No.</mat-label>
-        <input matInput placeholder="Enter the Bank A/C No....">
+        <input matInput placeholder="Enter the Bank A/C No..." name="Bankno" [(ngModel)]="Bankno">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Beneficiary Name</mat-label>
-        <input matInput placeholder="Enter the Beneficiary Name....">
+        <input matInput placeholder="Enter the Beneficiary Name...." name="Beneficiary" [(ngModel)]="Beneficiary">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Bank Name</mat-label>
-        <input matInput placeholder="Enter the Bank Name....">
+        <input matInput placeholder="Enter the Bank Name...." name="Bankname" [(ngModel)]="Bankname">
       </mat-form-field>
       <mat-form-field class="example-full-width">
+        <mat-label>Bank Branch</mat-label>
+        <input matInput placeholder="Enter the Bank Branch...." name="Bankbranch" [(ngModel)]="Bankbranch">
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
         <mat-label>IFSC Code</mat-label>
-        <input matInput placeholder="Enter the IFSC Code....">
+        <input matInput placeholder="Enter the IFSC Code...." name="IFSC" [(ngModel)]="IFSC">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Current Shift</mat-label>
+        <input type="number" matInput placeholder="Enter the EmpCurShift...." name="Curshift" [(ngModel)]="Curshift">
       </mat-form-field>
     </div>
     </div>
@@ -140,6 +161,6 @@
 </mat-form-field>
 </div>
 </div>
-      <button mat-raised-button color="primary"  routerLink="/emplist">Submit</button>
+      <button mat-raised-button color="primary"  (click)="addemp()" routerLink="/emplist">Submit</button>
       <button mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
   </form>

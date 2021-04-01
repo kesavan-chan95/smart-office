@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule } from '@angular/forms'
+import {FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
@@ -37,6 +37,7 @@ import {SignupComponent} from './signup/signup.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +61,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatGridListModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     MatTableModule,
     MatPaginatorModule,
