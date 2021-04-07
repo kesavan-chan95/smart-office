@@ -5,6 +5,7 @@ import {MatDialogRef} from '@angular/material/dialog';
   templateUrl: './attendance.component.html',
   styleUrls: ['./attendance.component.css']
 })
+
 export class AttendanceComponent implements OnInit {
 
   constructor(private matDialogRef:MatDialogRef<AttendanceComponent>) { }

@@ -6,7 +6,12 @@ import {FormGroup, FormControl} from '@angular/forms';
   styleUrls: ['./datepicker.component.css']
 })
 export class DatepickerComponent implements OnInit {
+public name=";"
 
+
+getname(){
+  alert("chella");
+}
   // minDate = new Date();
   // maxDate = new Date(2019, 3, 10);
   constructor() { }
