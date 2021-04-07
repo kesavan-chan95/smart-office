@@ -1,0 +1,46 @@
+<h1>Business list</h1>
+ <button mat-raised-button color="primary" style="float: right;" (click)="onOpenDialogclick()">Add Business</button>
+
+<!-- <button mat-raised-button color="primary" style="
+float: right;" (click)="onOpenDialogclick()">Add Business</button> -->
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="bid">
+      <th mat-header-cell *matHeaderCellDef>Employee No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.bid}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="bname">
+      <th mat-header-cell *matHeaderCellDef>Employee Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.bname}} </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="bemail">
+      <th mat-header-cell *matHeaderCellDef>Email id</th>
+      <td mat-cell *matCellDef="let element"> {{element.bemail}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="bphone1">
+      <th mat-header-cell *matHeaderCellDef>Phone No.</th>
+      <td mat-cell *matCellDef="let element"> {{element.bphone1}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="bwebsite">
+      <th mat-header-cell *matHeaderCellDef>Website</th>
+      <td mat-cell *matCellDef="let element"> {{element.bwebsite}} </td>
+    </ng-container>
+
+ 
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
+
+  
+  

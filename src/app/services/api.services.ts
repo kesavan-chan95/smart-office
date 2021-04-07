@@ -36,4 +36,10 @@ getemp(){
 deleteemp(data){
   return this.http.post(this.url+'/api/Employee/EmployeeCreation',data)
 }
+addbus(data){
+  return this.http.post(this.url+'/api/Business/BusinessCreation',data) 
+}
+getbus(){
+  return this.http.get(this.url+'/api/Business/GetAllBusiness')
+}
 }
