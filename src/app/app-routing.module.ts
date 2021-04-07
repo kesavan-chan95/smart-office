@@ -11,11 +11,14 @@ import {SlotListComponent} from './slot-list/slot-list.component';
 import {SigninComponent} from './signin/signin.component';
 import {SignupComponent} from './signup/signup.component';
 import {LoginComponent} from './login/login.component';
-
+import {BusinesslistComponent} from './businesslist/businesslist.component';
+import {BusinessComponent} from './business/business.component';
 
 const routes: Routes = [
   { path: 'item', component: ItemComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'businesslist', component: BusinesslistComponent },
+  { path: 'business', component: BusinessComponent },
   { path: '', component: SigninComponent },
   { path: 'customer', component: CustomerComponent },
   { path: 'cuslist', component: CustomerListComponent },

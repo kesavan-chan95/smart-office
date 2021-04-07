@@ -35,6 +35,9 @@ import { SlotListComponent } from './slot-list/slot-list.component';
 import {SigninComponent} from './signin/signin.component';
 import {SignupComponent} from './signup/signup.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {BusinessComponent} from './business/business.component';
+import {BusinesslistComponent} from './businesslist/businesslist.component';
+
 
 
 
@@ -52,6 +55,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     RegisterComponent,
     EmplistComponent,
     EmpComponent,
+    BusinessComponent,
+    BusinesslistComponent,
     SlotComponent,
     SlotListComponent
   ],
