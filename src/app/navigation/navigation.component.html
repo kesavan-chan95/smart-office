@@ -1,11 +1,11 @@
 <mat-toolbar color="primary" class="example-toolbar">
-	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+	<button mat-icon-button (click)="isExpanded = !isExpanded" *ngIf="!router.url.includes('signin')"><mat-icon>menu</mat-icon></button>
     <h1 style="flex-grow: 1;" class="example-app-name">Logo</h1>
     <!-- <mat-icon>notification_important</mat-icon>&nbsp; -->
     <mat-icon>account_circle</mat-icon>
 </mat-toolbar>
-<mat-sidenav-container class="example-container" autosize>
-	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+<mat-sidenav-container class="example-container" autosize >
+	<mat-sidenav #sidenav class="example-sidenav" *ngIf="!router.url.includes('signin')" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
 		<mat-nav-list>
 			<mat-list-item>
 				<span class="full-width" *ngIf="isExpanded || isShowing" routerLink='/emplist'>Employee</span>

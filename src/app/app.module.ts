@@ -38,7 +38,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {BusinessComponent} from './business/business.component';
 import {BusinesslistComponent} from './businesslist/businesslist.component';
 
-
+import { DashboardComponent } from './dashboard/dashboard.component'
+import {ApiService} from './services/api.services';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import {BusinesslistComponent} from './businesslist/businesslist.component';
     BusinessComponent,
     BusinesslistComponent,
     SlotComponent,
-    SlotListComponent
+    SlotListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +87,7 @@ import {BusinesslistComponent} from './businesslist/businesslist.component';
     MatDialogModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -42,4 +42,7 @@ addbus(data){
 getbus(){
   return this.http.get(this.url+'/api/Business/GetAllBusiness')
 }
+signin(data){
+  return this.http.post(this.url+'/api/Login/LoginValidate',data)
+}
 }
