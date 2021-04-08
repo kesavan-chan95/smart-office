@@ -4,10 +4,10 @@
             <h2>Manage Staff Easily from your Desktop</h2>
             <div class="form-group">
                 <label style="font-weight: 100;">User name</label>
-                <input type="text" class="form-control" id="username">
+                <input type="text" class="form-control" #email [(ngModel)]="Email" [ngModelOptions]="{standalone: true}">
                 <label style="font-weight: 100;" >Password</label>
-                <input type="text" class="form-control" id="pwd"><br>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <input type="text" class="form-control" [(ngModel)]="pwd" [ngModelOptions]="{standalone: true}"><br>
+                <button type="submit" class="btn btn-primary" (click)="signin()">Sign in</button>
               </div>
         </div>
         <div class="col-md-8">
