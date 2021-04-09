@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'cuslist', component: CustomerListComponent },
   { path: 'list', component: ListComponent },
   { path:'emplist', component:EmplistComponent},
-  { path:'dash', component:DashboardComponent},
+  { path:'', component:DashboardComponent},
   { path:'emp', component:EmpComponent},
   { path:'slot', component:SlotComponent},
   { path:'slotlist', component:SlotListComponent},
