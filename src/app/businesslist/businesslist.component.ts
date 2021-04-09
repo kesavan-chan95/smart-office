@@ -1,8 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit,ViewChild  } from '@angular/core';
 import { MatDialog} from '@angular/material/dialog';
 import {BusinessComponent} from '../business/business.component';
 import { ApiService } from '../services/api.services';
 
+
+
+import {MatTableDataSource} from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+
+const ELEMENT_DATA: any[] = [];
 
 @Component({
   selector: 'app-businesslist',
@@ -12,13 +18,14 @@ import { ApiService } from '../services/api.services';
 export class BusinesslistComponent implements OnInit  {
 
   displayedColumns: string[] = ['bid', 'bname', 'bemail','bphone1', 'bwebsite'];
-  dataSource : any[] = [];
+  dataSource = new MatTableDataSource<any>(ELEMENT_DATA);
+  
   constructor(private matDialogModule:MatDialog,
     private serivce:ApiService) { }
     ngOnInit(): void {
       this.serivce.getbus().subscribe((data: any[])=>{
         console.log(data);
-        this.dataSource = data;
+        this.dataSource.data= data;
       })
      }
   onOpenDialogclick(){
@@ -29,4 +36,9 @@ export class BusinesslistComponent implements OnInit  {
       });
     matDialogRef.afterClosed();
   }
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+ngAfterViewInit() {
+  this.dataSource.paginator = this.paginator;
+}
 }

@@ -1,0 +1,76 @@
+
+<mat-card>
+    
+    <h1>Employee Date</h1>
+
+    <mat-form-field class="datepicker">
+        <mat-label>From Date</mat-label>
+        <input matInput [matDatepicker]="myDatePicker">
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="datepicker">
+        <mat-label>To Date</mat-label>
+        <input matInput [matDatepicker]="toDatePicker">
+        <mat-datepicker-toggle [for]="toDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #toDatePicker></mat-datepicker>
+    </mat-form-field><br>
+
+    <mat-form-field class="example-full-width fills" appearance="fill">
+        <mat-label>location</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+<div id="wrapper">
+    <div class="block">
+        <mat-checkbox class="example-margin">S1</mat-checkbox>
+    </div>
+    <div class="block">  
+        <mat-checkbox class="example-margin">S2</mat-checkbox>
+    </div>
+    <div class="block"> 
+         <mat-checkbox class="example-margin">S3</mat-checkbox>
+    </div>
+    <div class="block"> 
+         <mat-checkbox class="example-margin">S4</mat-checkbox>
+    </div><br>
+     <div class="block">  
+        <mat-checkbox class="example-margin">R1</mat-checkbox>
+    </div>
+    <div class="block">  
+        <mat-checkbox class="example-margin">R2</mat-checkbox>
+    </div>
+    <div class="block">  
+        <mat-checkbox class="example-margin">R3</mat-checkbox>
+    </div>
+    <div class="block">  
+        <mat-checkbox class="example-margin">R4</mat-checkbox>
+    </div><br>
+  
+    <div class="block">  
+        <mat-checkbox class="example-margin">C1</mat-checkbox>
+    </div>
+    <div class="block">  
+        <mat-checkbox class="example-margin">C2</mat-checkbox>
+    </div>
+    <div class="block">
+          <mat-checkbox class="example-margin">C3</mat-checkbox>
+        </div>
+   <div class="block">  
+        <mat-checkbox class="example-margin">C4</mat-checkbox>
+    </div>
+   
+       
+  </div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Notes :</mat-label>
+    <textarea matInput placeholder="Enter the Notes..."></textarea>
+  </mat-form-field><br>
+  <button mat-raised-button color="primary">Submit</button>
+  <br/>
+  <br/>
+ 
+</mat-card>
