@@ -2,6 +2,7 @@ import { Component, AfterViewInit,ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog} from '@angular/material/dialog';
 import {EmpComponent} from '../emp/emp.component';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-emplist',
@@ -10,7 +11,8 @@ import {EmpComponent} from '../emp/emp.component';
 })
 export class EmplistComponent  {
   displayedColumns: string[] = ['position', 'name', 'Department', 'Designation', 'Contact'];
-  dataSource = ELEMENT_DATA;
+  // dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   constructor(private matDialogModule:MatDialog) { }
   onOpenDialogclick(){
@@ -23,9 +25,9 @@ export class EmplistComponent  {
   }
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  // ngAfterViewInit() {
-  //   this.dataSource.paginator = this.paginator;
-  // }
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 }
   
 export interface PeriodicElement {
