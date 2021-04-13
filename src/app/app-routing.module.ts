@@ -18,6 +18,7 @@ import {EmpattendanceComponent} from './empattendance/empattendance.component';
 import {BranchlistComponent} from './branchlist/branchlist.component';
 
 import {EmployeeroomComponent} from './employeeroom/employeeroom.component';
+import { DeptlistComponent } from './deptlist/deptlist.component';
 
 
 const routes: Routes = [
@@ -35,16 +36,14 @@ const routes: Routes = [
   { path:'slot', component:SlotComponent},
   { path:'slotlist', component:SlotListComponent},
   { path:'signup', component:SignupComponent},
-
-  
-
    { path:'slot', component:SlotComponent},
   { path:'slotlist', component:SlotListComponent},
   {path:'empattendance', component:EmpattendanceComponent},
   {path:'branchlist', component:BranchlistComponent},
   {path:'businesslist', component:BusinesslistComponent},
   {path:'employeeroom', component:EmployeeroomComponent},
-  
+  {path:'deptlist',component:DeptlistComponent}
+
 ];
 
 @NgModule({
