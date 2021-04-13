@@ -51,6 +51,9 @@ import {EmployeeroomComponent} from './employeeroom/employeeroom.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { MatNativeDateModule } from '@angular/material/core';
+import { DeptlistComponent } from './deptlist/deptlist.component';
+import { DepartmentComponent } from './department/department.component';
+
 
 @NgModule({
   declarations: [
@@ -77,14 +80,18 @@ import { MatNativeDateModule } from '@angular/material/core';
     BusinessComponent,
     BusinesslistComponent,
     BranchlistComponent,
-    EmployeeroomComponent
+    EmployeeroomComponent,
+    DeptlistComponent,
+    DepartmentComponent,
+   
   
   ],
   entryComponents:[
     AttendanceComponent,
     BusinessComponent,
     MatDatepickerModule, 
-    MatFormFieldModule
+    MatFormFieldModule,
+    DepartmentComponent
   ],
   imports: [
     BrowserModule,
