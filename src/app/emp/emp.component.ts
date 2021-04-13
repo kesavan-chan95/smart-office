@@ -66,6 +66,7 @@ export class EmpComponent implements OnInit {
       this.serivce.addemp(data).subscribe(res=>{
         console.log(res)
         this.routes.navigateByUrl('/emplist')
+        window.location.reload();
         this.matDialogRef.close();
       })
     }

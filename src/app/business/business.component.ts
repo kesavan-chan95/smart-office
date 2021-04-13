@@ -41,7 +41,7 @@ export class BusinessComponent implements OnInit {
     console.log(data)
     this.serivce.addbus(data).subscribe(res=>{
       console.log(res)
-      this.routes.navigateByUrl('/emplist')
+      this.routes.navigateByUrl('/businesslist')
       this.matDialogRef.close();
     })
   }

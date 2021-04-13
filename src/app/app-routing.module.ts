@@ -33,8 +33,7 @@ const routes: Routes = [
   { path:'emplist', component:EmplistComponent},
   { path:'', component:DashboardComponent},
   
-  { path:'slot', component:SlotComponent},
-  { path:'slotlist', component:SlotListComponent},
+  
   { path:'signup', component:SignupComponent},
    { path:'slot', component:SlotComponent},
   { path:'slotlist', component:SlotListComponent},

@@ -45,4 +45,10 @@ getbus(){
 signin(data){
   return this.http.post(this.url+'/api/Login/LoginValidate',data)
 }
+adddept(data){
+  return this.http.post(this.url+'/api/Configlov/ConfigLovCreation',data) 
+}
+getdept(){
+  return this.http.get(this.url+'/api/Configlov/GetAllConfigLov')
+}
 }
