@@ -41,6 +41,19 @@ import {BusinesslistComponent} from './businesslist/businesslist.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
 import {ApiService} from './services/api.services';
 
+import { EmpattendanceComponent } from './empattendance/empattendance.component';
+import { AttendanceComponent } from './attendance/attendance.component';
+
+import {BranchComponent} from './branch/branch.component';
+import {BranchlistComponent } from './branchlist/branchlist.component';
+
+import {EmployeeroomComponent} from './employeeroom/employeeroom.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+import { MatNativeDateModule } from '@angular/material/core';
+import { DeptlistComponent } from './deptlist/deptlist.component';
+import { DepartmentComponent } from './department/department.component';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +73,25 @@ import {ApiService} from './services/api.services';
     BusinesslistComponent,
     SlotComponent,
     SlotListComponent,
-    DashboardComponent
+    DashboardComponent,
+    EmpattendanceComponent,
+    AttendanceComponent,
+    BranchComponent,
+    BusinessComponent,
+    BusinesslistComponent,
+    BranchlistComponent,
+    EmployeeroomComponent,
+    DeptlistComponent,
+    DepartmentComponent,
+   
+  
+  ],
+  entryComponents:[
+    AttendanceComponent,
+    BusinessComponent,
+    MatDatepickerModule, 
+    MatFormFieldModule,
+    DepartmentComponent
   ],
   imports: [
     BrowserModule,
@@ -84,8 +115,12 @@ import {ApiService} from './services/api.services';
     MatProgressBarModule,
     MatButtonModule,
     MatSidenavModule,
+    BrowserAnimationsModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    MatDatepickerModule,
+    MatNativeDateModule
+     
+       
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

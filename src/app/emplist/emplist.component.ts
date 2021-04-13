@@ -5,6 +5,10 @@ import { MatDialog} from '@angular/material/dialog';
 import {EmpComponent} from '../emp/emp.component';
 import { ApiService } from '../services/api.services';
 
+import {MatTableDataSource} from '@angular/material/table';
+
+
+
 @Component({
   selector: 'app-emplist',
   templateUrl: './emplist.component.html',
@@ -12,14 +16,14 @@ import { ApiService } from '../services/api.services';
 })
 export class EmplistComponent implements OnInit  {
   displayedColumns: string[] = ['empId', 'empName', 'empEmail','empContactNo', 'empBankName', 'actions'];
-  dataSource : any[] = [];
+  dataSource = new MatTableDataSource<any>(ELEMENT_DATA);
 
   constructor(private matDialogModule:MatDialog,
     private serivce:ApiService) { }
     ngOnInit(): void {
       this.serivce.getemp().subscribe((data: any[])=>{
         console.log(data);
-        this.dataSource = data;
+        this.dataSource.data = data;
       })
      }
 
@@ -43,9 +47,9 @@ export class EmplistComponent implements OnInit  {
   }
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  // ngAfterViewInit() {
-  //   this.dataSource.paginator = this.paginator;
-  // }
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 }
   
 export interface Data {

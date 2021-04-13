@@ -1,0 +1,35 @@
+<table mat-tableclass="mat-elevation-z8">
+    <div class="parent" fxLayout="row" >   
+        <div fxFlex class="left">
+     <h1>iyyankannu</h1>
+     <mat-form-field class="datepicker">
+        <mat-label>08-03-2021</mat-label>
+        <input matInput [matDatepicker]="toDatePicker">
+        <mat-datepicker-toggle [for]="toDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #toDatePicker></mat-datepicker>
+    </mat-form-field><br>
+    <a href=""><mat-icon>note_add</mat-icon>Add Note</a>
+     <!-- <button class="icon"><mat-icon>note_add</mat-icon>Add Note</button> -->
+        </div> 
+        <div fxFlex class="right">
+            <button><span></span>  Present</button>
+            <button><span></span>  Half day</button>
+            <button><span></span>  Absent</button><br>
+           
+            <div class="parent" fxLayout="row" > 
+                <button><span></span>OT</button>  
+
+                <input
+                  type="time"
+                  id="input"
+                  class="form-control"
+                  value="13:00"
+                  mdbInput
+                />
+                <button><span></span>Paid Leave</button>  
+            </div>
+           </div>
+    </div>
+    <button mat-raised-button color="primary" class="sub">Submit</button>
+<button class="sub" style="float: right;" mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
+</table>
