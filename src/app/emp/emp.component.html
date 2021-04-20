@@ -1,32 +1,38 @@
 <mat-toolbar color="primary" class="example-toolbar">
-	<!-- <button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button> -->
-    <h1 style="flex-grow: 1;" class="example-app-name">Employee Details</h1>
-    <!-- <mat-icon>notification_important</mat-icon>&nbsp; -->
-    <mat-icon>account_circle</mat-icon>
+  <!-- <button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button> -->
+  <h1 style="flex-grow: 1;" class="example-app-name">Employee Details</h1>
+  <!-- <mat-icon>notification_important</mat-icon>&nbsp; -->
+  <mat-icon>account_circle</mat-icon>
 </mat-toolbar>
 <form class="example-form">
-    <div class="parent" fxLayout="row" >   
-        <div fxFlex class="left">
-     <mat-form-field class="example-full-width">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Enter the name" name="Name" [(ngModel)]="Name">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Department</mat-label>
-      <input type="number" matInput placeholder="Enter the Department..." name="Department" [(ngModel)]="Department" >
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
+  <div class="parent" fxLayout="row">
+    <div fxFlex class="left">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter the name" name="Name" [(ngModel)]="Name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Department</mat-label>
+        <mat-select placeholder="Select Department">  
+          <mat-option *ngFor="let data of Department" [value]="data.value">
+            {{data.clLovtype}}
+          </mat-option>
+        </mat-select>
+        
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
         <mat-label>Designation</mat-label>
-        <input type="number" matInput placeholder="Enter the Designation..." name="Designation" [(ngModel)]="Designation" >
+        <input type="text" matInput placeholder="Enter the Designation..." name="Designation"
+          [(ngModel)]="Designation">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Contact</mat-label>
-        <input matInput placeholder="Enter the Contact..." name="Contact" [(ngModel)]="Contact" >
+        <input matInput placeholder="Enter the Contact..." name="Contact" [(ngModel)]="Contact">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Alternative Contact No.</mat-label>
-        <input matInput placeholder="Enter the Alternative Contact..." name="AltContact" [(ngModel)]="AltContact" >
+        <input matInput placeholder="Enter the Alternative Contact..." name="AltContact" [(ngModel)]="AltContact">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Email</mat-label>
@@ -34,24 +40,24 @@
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Salary</mat-label>
-        <input matInput placeholder="Enter the Salary..." name="Salary" [(ngModel)]="Salary" >
+        <input matInput placeholder="Enter the Salary..." name="Salary" [(ngModel)]="Salary">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Basic Salary</mat-label>
-        <input type="number" matInput placeholder="Enter the Salary..." name="BSalary" [(ngModel)]="BSalary" >
+        <input type="number" matInput placeholder="Enter the Salary..." name="BSalary" [(ngModel)]="BSalary">
       </mat-form-field>
-        </div>
-        
-        <div fxFlex class="right">
-            <h1> </h1>
-            <mat-form-field class="example-full-width">
-              <mat-label>Leave Allowed Month</mat-label>
-              <input type="number" matInput placeholder="Enter the EmpLeaveAllowdMonth..." name="Leave" [(ngModel)]="Leave">
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Pan no.</mat-label>
-              <input matInput placeholder="Enter the Pan number..." name="pan" [(ngModel)]="pan">
-            </mat-form-field>     
+    </div>
+
+    <div fxFlex class="right">
+      <h1> </h1>
+      <mat-form-field class="example-full-width">
+        <mat-label>Leave Allowed Month</mat-label>
+        <input type="number" matInput placeholder="Enter the EmpLeaveAllowdMonth..." name="Leave" [(ngModel)]="Leave">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Pan no.</mat-label>
+        <input matInput placeholder="Enter the Pan number..." name="pan" [(ngModel)]="pan">
+      </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Employee Uid</mat-label>
         <input matInput placeholder="Enter the EmpUid..." name="EmpUid" [(ngModel)]="EmpUid">
@@ -72,7 +78,7 @@
         <mat-label>Bank Branch</mat-label>
         <input matInput placeholder="Enter the Bank Branch...." name="Bankbranch" [(ngModel)]="Bankbranch">
       </mat-form-field>
-      
+
       <mat-form-field class="example-full-width">
         <mat-label>IFSC Code</mat-label>
         <input matInput placeholder="Enter the IFSC Code...." name="IFSC" [(ngModel)]="IFSC">
@@ -82,95 +88,95 @@
         <input type="number" matInput placeholder="Enter the EmpCurShift...." name="Curshift" [(ngModel)]="Curshift">
       </mat-form-field>
     </div>
-    </div>
-    <div class="parent" fxLayout="row" >   
-        <div fxFlex class="left">
+  </div>
+  <div class="parent" fxLayout="row">
+    <div fxFlex class="left">
       <h1>Address Details</h1>
       <mat-form-field class="example-full-width">
         <mat-label>Door No.</mat-label>
         <textarea matInput placeholder="Enter the Door no."></textarea>
       </mat-form-field>
-    
+
       <mat-form-field class="example-full-width">
         <mat-label>Street Name</mat-label>
         <textarea matInput placeholder="Enter the Street Name..."></textarea>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-          <mat-label>Area</mat-label>
-          <textarea matInput placeholder="Enter the Area..."></textarea>
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <mat-label>City</mat-label>
-          <textarea matInput placeholder="Enter the City..."></textarea>
-        </mat-form-field>
+        <mat-label>Area</mat-label>
+        <textarea matInput placeholder="Enter the Area..."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <textarea matInput placeholder="Enter the City..."></textarea>
+      </mat-form-field>
     </div>
     <div fxFlex class="right">
-        <h1> </h1>
-  <mat-form-field class="example-full-width">
-    <mat-label>Landmark</mat-label>
-    <textarea matInput placeholder="Enter the Landmark..."></textarea>
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Pincode No.</mat-label>
-    <textarea matInput placeholder="Enter the Pincode..."></textarea>
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Latitude</mat-label>
-    <textarea matInput placeholder="Enter the Latitude...."></textarea>
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Longitude</mat-label>
-    <textarea matInput placeholder="Enter the Longitude...."></textarea>
-  </mat-form-field>
-</div>
-</div>
-<mat-checkbox class="example-margin">same</mat-checkbox>
-<div class="parent" fxLayout="row" >   
-  <div fxFlex class="left">
-<h1>Temporary Address Details</h1>
-<mat-form-field class="example-full-width">
-  <mat-label>Door No.</mat-label>
-  <textarea matInput placeholder="Enter the Door no."></textarea>
-</mat-form-field>
-
-<mat-form-field class="example-full-width">
-  <mat-label>Street Name</mat-label>
-  <textarea matInput placeholder="Enter the Street Name..."></textarea>
-</mat-form-field>
-<mat-form-field class="example-full-width">
-    <mat-label>Area</mat-label>
-    <textarea matInput placeholder="Enter the Area..."></textarea>
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>City</mat-label>
-    <textarea matInput placeholder="Enter the City..."></textarea>
-  </mat-form-field>
-</div>
-<div fxFlex class="right">
-  <h1> </h1>
-<mat-form-field class="example-full-width">
-<mat-label>Landmark</mat-label>
-<textarea matInput placeholder="Enter the Landmark..."></textarea>
-</mat-form-field>
-<mat-form-field class="example-full-width">
-<mat-label>Pincode No.</mat-label>
-<textarea matInput placeholder="Enter the Pincode..."></textarea>
-</mat-form-field>
-<mat-form-field class="example-full-width">
-<mat-label>Latitude</mat-label>
-<textarea matInput placeholder="Enter the Latitude...."></textarea>
-</mat-form-field>
-<mat-form-field class="example-full-width">
-<mat-label>Longitude</mat-label>
-<textarea matInput placeholder="Enter the Longitude...."></textarea>
-</mat-form-field>
-</div>
-</div>
-           
-  </form>
-  <mat-toolbar color="primary" class="example-toolbar">
-    <div class="container">
-      <button mat-raised-button color="Basic"  (click)="addemp()" routerLink="/emplist">Submit</button>
-      <button mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
+      <h1> </h1>
+      <mat-form-field class="example-full-width">
+        <mat-label>Landmark</mat-label>
+        <textarea matInput placeholder="Enter the Landmark..."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Pincode No.</mat-label>
+        <textarea matInput placeholder="Enter the Pincode..."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Latitude</mat-label>
+        <textarea matInput placeholder="Enter the Latitude...."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Longitude</mat-label>
+        <textarea matInput placeholder="Enter the Longitude...."></textarea>
+      </mat-form-field>
     </div>
-  </mat-toolbar>
+  </div>
+  <mat-checkbox class="example-margin">same</mat-checkbox>
+  <div class="parent" fxLayout="row">
+    <div fxFlex class="left">
+      <h1>Temporary Address Details</h1>
+      <mat-form-field class="example-full-width">
+        <mat-label>Door No.</mat-label>
+        <textarea matInput placeholder="Enter the Door no."></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Street Name</mat-label>
+        <textarea matInput placeholder="Enter the Street Name..."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Area</mat-label>
+        <textarea matInput placeholder="Enter the Area..."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <textarea matInput placeholder="Enter the City..."></textarea>
+      </mat-form-field>
+    </div>
+    <div fxFlex class="right">
+      <h1> </h1>
+      <mat-form-field class="example-full-width">
+        <mat-label>Landmark</mat-label>
+        <textarea matInput placeholder="Enter the Landmark..."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Pincode No.</mat-label>
+        <textarea matInput placeholder="Enter the Pincode..."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Latitude</mat-label>
+        <textarea matInput placeholder="Enter the Latitude...."></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Longitude</mat-label>
+        <textarea matInput placeholder="Enter the Longitude...."></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+</form>
+<mat-toolbar color="primary" class="example-toolbar">
+  <div class="container">
+    <button mat-raised-button color="Basic" (click)="addemp()" routerLink="/emplist">Submit</button>
+    <button mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
+  </div>
+</mat-toolbar>

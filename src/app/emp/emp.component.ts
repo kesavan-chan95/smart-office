@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class EmpComponent implements OnInit {
   Name: string;
-  Department: number;
-  Designation: number;
+  Department: slot[];
+  Designation: string;
   Contact: string;
   AltContact: string;
   email: string;
@@ -35,6 +35,10 @@ export class EmpComponent implements OnInit {
     private routes:Router) { }
 
     ngOnInit(): void {
+      this.serivce.getdept().subscribe((data: any[])=>{
+        console.log(data);
+        this.Department= data;
+      })
     }
     addemp(){
       let data = {
@@ -42,7 +46,7 @@ export class EmpComponent implements OnInit {
         Bid:1,
         EmpCode:"321",
         EmpName: this.Name,
-        EmpDepartment: this.Department,
+        EmpDepartment:"1",
         EmpDesignation: this.Designation,
         EmpContactNo: this.Contact,
         EmpAltContactNo: this.AltContact,
@@ -73,4 +77,8 @@ export class EmpComponent implements OnInit {
   onCloseClick(){
     this.matDialogRef.close();
   }
+}
+interface slot {
+ 
+  clLovtype: string;
 }
