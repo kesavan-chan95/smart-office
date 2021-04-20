@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 interface branch {
   value: string;
@@ -16,9 +17,14 @@ export class BranchComponent implements OnInit {
     {value: 'demo2', viewValue: 'demo2'},
     {value: 'demo3', viewValue: 'demo3'}
   ];
-  constructor(private matDialogRef:MatDialogRef<BranchComponent>) { }
+  constructor(private matDialogRef:MatDialogRef<BranchComponent>,
+    private routes:Router) { }
 
   ngOnInit(): void {
+  }
+  addbranch(){
+    this.routes.navigateByUrl('/branchlist');
+    this.matDialogRef.close();
   }
   onCloseClick(){
     this.matDialogRef.close();

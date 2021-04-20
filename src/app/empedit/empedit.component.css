@@ -27,6 +27,14 @@
   button{
     margin-right: 20px;
   }
+  .foot{
+    position: fixed;
+    bottom: 550px;
+    width: 81%;
+    left: 128px;
+    right: 128px;
+    margin-bottom: 12px;
+  }
   footer{
     position: fixed;
     height: 50px;
@@ -35,11 +43,3 @@
     right: 128px;
     margin-bottom: 37px;
   }
- .foot{
-   position: fixed;
-   bottom: 550px;
-   width: 81%;
-   left: 128px;
-   right: 128px;
-   margin-bottom: 12px;
- }

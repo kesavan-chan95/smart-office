@@ -12,13 +12,12 @@ import {SignupComponent} from './signup/signup.component';
 import {LoginComponent} from './login/login.component';
 import {BusinesslistComponent} from './businesslist/businesslist.component';
 import {BusinessComponent} from './business/business.component';
-
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {EmpattendanceComponent} from './empattendance/empattendance.component';
 import {BranchlistComponent} from './branchlist/branchlist.component';
-
 import {EmployeeroomComponent} from './employeeroom/employeeroom.component';
 import { DeptlistComponent } from './deptlist/deptlist.component';
+import { AccountlistComponent } from './accountlist/accountlist.component';
 
 
 const routes: Routes = [
@@ -32,18 +31,16 @@ const routes: Routes = [
   { path: 'list', component: ListComponent },
   { path:'emplist', component:EmplistComponent},
   { path:'', component:DashboardComponent},
-  
-  { path:'slot', component:SlotComponent},
-  { path:'slotlist', component:SlotListComponent},
   { path:'signup', component:SignupComponent},
-   { path:'slot', component:SlotComponent},
+  { path:'slot', component:SlotComponent},
   { path:'slotlist', component:SlotListComponent},
   {path:'empattendance', component:EmpattendanceComponent},
   {path:'branchlist', component:BranchlistComponent},
   {path:'businesslist', component:BusinesslistComponent},
   {path:'employeeroom', component:EmployeeroomComponent},
-  {path:'deptlist',component:DeptlistComponent}
-
+  {path:'deptlist',component:DeptlistComponent},
+  {path:'accountlist',component:AccountlistComponent},
+  
 ];
 
 @NgModule({

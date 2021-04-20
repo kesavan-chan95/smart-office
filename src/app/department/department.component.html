@@ -4,16 +4,16 @@
      <h1>Department</h1>
     <mat-form-field class="example-full-width">
       <mat-label>Code</mat-label>
-      <input matInput placeholder="Enter the code...">
+      <input matInput name="code" [(ngModel)]="code" placeholder="Enter the code...">
     </mat-form-field><br>
   
     <mat-form-field class="example-full-width">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="Enter the name...">
+      <input matInput name="Name" [(ngModel)]="Name" placeholder="Enter the name...">
     </mat-form-field>
        <br>     
     <br>
-      <button mat-raised-button color="primary"  routerLink="/emplist">Submit</button>
+      <button mat-raised-button color="primary" (click)="adddept()" routerLink="/deptlist">Submit</button>
       <button mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
       
   </form>

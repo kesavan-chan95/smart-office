@@ -4,19 +4,14 @@ import { MatDialog} from '@angular/material/dialog';
 import {DepartmentComponent} from '../department/department.component';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { ApiService } from '../services/api.services';
 
 export interface PeriodicElement {
-  code: number;
-  department: string;
+  bid:number;
+  clLovtype: string;
   
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  {code: 1, department:'MCA'},
-  {code: 2, department:'MBA'},
-  {code: 3, department:'CS'},
-  {code: 4, department:'CA'},
-  {code: 5, department:'BA'},
-  {code: 6, department:'EEE'},
   ]
 @Component({
   selector: 'app-deptlist',
@@ -28,7 +23,14 @@ export class DeptlistComponent {
 displayedColumns: string[] = ['code', 'department'];
 dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  constructor(private matDialogModule:MatDialog) { }
+  constructor(private matDialogModule:MatDialog,
+    private serivce:ApiService) { }
+    ngOnInit(): void {
+      this.serivce.getdept().subscribe((data: any[])=>{
+        console.log(data);
+        this.dataSource.data = data;
+      })
+     }
 
   // constructor(public dialog: MatDialog) { }
   onOpenDialogclick(){

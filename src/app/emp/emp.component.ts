@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
 import { ApiService } from '../services/api.services';
 import { Router } from '@angular/router';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-emp',
@@ -28,11 +29,12 @@ export class EmpComponent implements OnInit {
   Curshift:number
 
 
-
-
   constructor(private matDialogRef:MatDialogRef<EmpComponent>,
+    
     private serivce:ApiService,
+    // private notificationService: NotificationService,
     private routes:Router) { }
+    
 
     ngOnInit(): void {
     }
@@ -66,10 +68,17 @@ export class EmpComponent implements OnInit {
       this.serivce.addemp(data).subscribe(res=>{
         console.log(res)
         this.routes.navigateByUrl('/emplist')
+        window.location.reload();
         this.matDialogRef.close();
       })
     }
   onCloseClick(){
     this.matDialogRef.close();
   }
+  // onDelete(){
+  //   if(confirm('Are you sure to delete this record ?')){
+   
+  //   this.notificationService.warn('! Deleted successfully');
+  //   }
+  // }
 }
