@@ -1,9 +1,7 @@
-<mat-toolbar color="primary" class="example-toolbar">
-  <!-- <button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button> -->
-  <h1 style="flex-grow: 1;" class="example-app-name">Employee Details</h1>
-  <!-- <mat-icon>notification_important</mat-icon>&nbsp; -->
-  <mat-icon>account_circle</mat-icon>
-</mat-toolbar>
+<mat-toolbar color="primary" class="example-toolbar foot">
+    <h1 style="flex-grow: 1;" class="example-app-name">Employee Details</h1>
+    <mat-icon (click)="onCloseClick()">close</mat-icon>
+</mat-toolbar><br><br>
 <form class="example-form">
   <div class="parent" fxLayout="row">
     <div fxFlex class="left">
@@ -139,6 +137,7 @@
         <textarea matInput placeholder="Enter the Door no."></textarea>
       </mat-form-field>
 
+<<<<<<< HEAD
       <mat-form-field class="example-full-width">
         <mat-label>Street Name</mat-label>
         <textarea matInput placeholder="Enter the Street Name..."></textarea>
@@ -180,3 +179,50 @@
     <button mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
   </div>
 </mat-toolbar>
+=======
+<mat-form-field class="example-full-width">
+  <mat-label>Street Name</mat-label>
+  <textarea matInput placeholder="Enter the Street Name..."></textarea>
+</mat-form-field>
+<mat-form-field class="example-full-width">
+    <mat-label>Area</mat-label>
+    <textarea matInput placeholder="Enter the Area..."></textarea>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>City</mat-label>
+    <textarea matInput placeholder="Enter the City..."></textarea>
+  </mat-form-field>
+</div>
+<div fxFlex class="right">
+  <h1> </h1>
+<mat-form-field class="example-full-width">
+<mat-label>Landmark</mat-label>
+<textarea matInput placeholder="Enter the Landmark..."></textarea>
+</mat-form-field>
+<mat-form-field class="example-full-width">
+<mat-label>Pincode No.</mat-label>
+<textarea matInput placeholder="Enter the Pincode..."></textarea>
+</mat-form-field>
+<mat-form-field class="example-full-width">
+<mat-label>Latitude</mat-label>
+<textarea matInput placeholder="Enter the Latitude...."></textarea>
+</mat-form-field>
+<mat-form-field class="example-full-width">
+<mat-label>Longitude</mat-label>
+<textarea matInput placeholder="Enter the Longitude...."></textarea>
+</mat-form-field>
+</div>
+</div>
+ <br><br>
+  </form>
+  <footer>
+  <mat-toolbar color="primary" class="example-toolbar">
+    <div class="container">
+      <button mat-raised-button color="Basic"  (click)="addemp()" >Submit</button>
+      <button mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
+
+      <button mat-raised-button color="warn"  style="float: right;">Delete</button>
+    </div>
+  </mat-toolbar>
+</footer>
+>>>>>>> 66af31ac9f8b23676b8dee4a0738b6deb7d81ffe

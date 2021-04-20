@@ -53,6 +53,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DeptlistComponent } from './deptlist/deptlist.component';
 import { DepartmentComponent } from './department/department.component';
+import { AccountlistComponent } from './accountlist/accountlist.component';
+import { AccountleadgerComponent } from './accountleadger/accountleadger.component';
+import { EmpeditComponent } from './empedit/empedit.component';
 
 
 @NgModule({
@@ -83,6 +86,9 @@ import { DepartmentComponent } from './department/department.component';
     EmployeeroomComponent,
     DeptlistComponent,
     DepartmentComponent,
+    AccountlistComponent,
+    AccountleadgerComponent,
+    EmpeditComponent,
    
   
   ],
@@ -91,7 +97,8 @@ import { DepartmentComponent } from './department/department.component';
     BusinessComponent,
     MatDatepickerModule, 
     MatFormFieldModule,
-    DepartmentComponent
+    DepartmentComponent,
+    AccountleadgerComponent
   ],
   imports: [
     BrowserModule,
