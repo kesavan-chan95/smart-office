@@ -4,10 +4,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog} from '@angular/material/dialog';
 import {EmpComponent} from '../emp/emp.component';
 import { ApiService } from '../services/api.services';
-
 import {MatTableDataSource} from '@angular/material/table';
-
-
+import {EmpeditComponent} from '../empedit/empedit.component';
 
 @Component({
   selector: 'app-emplist',
@@ -45,6 +43,15 @@ export class EmplistComponent implements OnInit  {
       });
     matDialogRef.afterClosed();
   }
+  onOpeneditclick(){
+    let matDialogRef = this.matDialogModule.open(EmpeditComponent,
+      {
+        width:"1700px",
+        height:"600px"
+      });
+    matDialogRef.afterClosed();
+    }
+  
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngAfterViewInit() {

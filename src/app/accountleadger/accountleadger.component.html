@@ -1,0 +1,29 @@
+
+<form class="example-form">
+           
+    <h1>Account Leadger Master </h1>
+   <mat-form-field class="example-full-width">
+     <mat-label>Code</mat-label>
+     <input matInput name="code" placeholder="Enter the code...">
+   </mat-form-field><br>
+ 
+   <mat-form-field class="example-full-width">
+     <mat-label>Name</mat-label>
+     <input matInput name="Name"  placeholder="Enter the name...">
+   </mat-form-field><br>
+   <mat-form-field appearance="fill">
+    <mat-label>Group</mat-label>
+    <select matNativeControl required>
+      <option value="Demo1">Demo1</option>
+      <option value="Demo2">Demo2</option>
+      <option value="Demo3">Demo3</option>
+      
+    </select>
+  </mat-form-field>
+      <br>     
+   <br>
+     <button mat-raised-button color="primary">Submit</button>
+     <button mat-raised-button color="warn" (click)="onCloseClick()">Close</button>
+ </form>
+
+

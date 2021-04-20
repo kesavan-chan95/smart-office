@@ -1,0 +1,11 @@
+form{
+    width: 440px;
+    height: 290px;
+    text-align: center;
+}
+mat-form-field{
+    width: 300px;
+}
+button{
+    margin-right: 20px;
+  }
